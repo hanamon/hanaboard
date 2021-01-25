@@ -56,7 +56,7 @@ class  Class_HanaBoard_List_Table extends WP_List_Table {
 
     /* 정렬 가능한 열 정의 */
     public function get_sortable_columns() {
-        return array('ID' => array('ID', false), 'post_title' => array('post_title', false));
+        return array('ID' => array('ID', false), 'post_title' => array('post_title', false), 'post_date' => array('post_date', false));
     }
 
 	/* DB 테이블 가져오기 */
