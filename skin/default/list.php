@@ -1,4 +1,4 @@
-<div id="hanaboard-wrap" style="background:pink">
+<div id="hanaboard-wrap">
 
 	<h2><? echo $hanaboard_content_board; ?></h2>
 	
