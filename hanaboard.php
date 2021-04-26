@@ -15,7 +15,7 @@ class HanaBoard {
 	
 	// 프로퍼티 생성
 	public $POST_TYPE_Board;
-    public $POST_TYPE_Content;
+	public $POST_TYPE_Content;
 	
 	// __construct() 생성자 메소드로 초기화
 	public function __construct() {		
@@ -117,13 +117,13 @@ class HanaBoard {
 	// 하나보드 게시판 목록 칼럼 헤더 수정
 	public function columns_hanaboard( $columns ) {
 		unset( $columns );
-		$columns['cb'] 			= '<input type="checkbox">';	
-		$columns['image']		= '썸네일';
-		$columns['title'] 		= '게시판 이름';
-		$columns['skin'] 		= '스킨';
-		$columns['shortcode'] 	= '숏코드';
-		$columns['author'] 		= '작성자';
-		$columns['date'] 		= '생성일';
+		$columns['cb']        = '<input type="checkbox">';	
+		$columns['image']     = '썸네일';
+		$columns['title']     = '게시판 이름';
+		$columns['skin']      = '스킨';
+		$columns['shortcode'] = '숏코드';
+		$columns['author']    = '작성자';
+		$columns['date']      = '생성일';
 		return $columns;
 	}
 	
@@ -211,12 +211,12 @@ class HanaBoard {
 	// 게시판 메타 상자 만들기 (참고 : 메타 상자 != 사용자 지정 메타 필드)
 	public function add_custom_meta_box_hanaboard( $post_id ) {
 		add_meta_box(
-			'hanaboard-basic-setting', 									// 메타 박스 'id' 속성
-			'게시판 기본 설정', 												// 메타 박스 제목
-			Array($this, 'hanaboard_basic_setting_meta_box_callback'), 	// 콜백 함수
-			'hanaboard', 												// 포스트 타입 ( 생략하면 모든 포스트 타입에 출력됨)
-			'normal',													// $context
-			'high'                         								// $priority
+			'hanaboard-basic-setting', // 메타 박스 'id' 속성
+			'게시판 기본 설정', // 메타 박스 제목
+			Array($this, 'hanaboard_basic_setting_meta_box_callback'), // 콜백 함수
+			'hanaboard', // 포스트 타입 ( 생략하면 모든 포스트 타입에 출력됨)
+			'normal', // $context
+			'high', // $priority
 		);
 	}
 	
@@ -333,12 +333,12 @@ class HanaBoard {
 	// 게시글 메타 상자 만들기 (참고 : 메타 상자 != 사용자 지정 메타 필드)
 	public function add_custom_meta_box_hanaboard_content( $post_id ) {
 		add_meta_box(
-			'hanaboard-content-basic-setting', 									// 메타 박스 'id' 속성
-			'게시글 기본 설정', 														// 메타 박스 제목
-			Array($this, 'hanaboard_content_basic_setting_meta_box_callback'), 	// 콜백 함수
-			'hanaboard_content', 												// 포스트 타입 ( 생략하면 모든 포스트 타입에 출력됨)
-			'normal',															// $context
-			'high'                         										// $priority
+			'hanaboard-content-basic-setting', // 메타 박스 'id' 속성
+			'게시글 기본 설정', // 메타 박스 제목
+			Array($this, 'hanaboard_content_basic_setting_meta_box_callback'), // 콜백 함수
+			'hanaboard_content', // 포스트 타입 ( 생략하면 모든 포스트 타입에 출력됨)
+			'normal', // $context
+			'high', // $priority
 		);
 	}
 
